@@ -1,7 +1,7 @@
 {
   "name": "transicc",
   "version": "1.0.0",
-  "description": "A nodejs wrapper for LittleCMS's transicc command line utility. Easily perform true ICC Profile-based color conversions from inside node.",
+  "description": "A nodejs wrapper for LittleCMSs transicc command line utility. Easily perform true ICC Profile-based color conversions from inside node.",
   "main": "transicc.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "keywords": [
     "color",
     "conversion",
-    "ICC"
+    "ICC",
     "ICC profiles",
     "node",
     "LittleCMS",

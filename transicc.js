@@ -7,13 +7,7 @@ var spawn = require( "child_process" ).spawn;
 module.exports = function( input_profile, output_profile, args, callback ) {
 	
 	// create an array of arguments we'll pass to the transicc command
-	var cmd_arg = [];
-
-	// add the input profile
-	cmd_arg.push( ( input_profile.match(".icc") ? input_profile : "profile/"+input_profile+".icc" ) );
-
-	// add the output profile
-	cmd_arg.push( ( output_profile.match(".icc") ? output_profile : "profile/"+output_profile+".icc" ) );
+	var cmd_arg = [ input_profile , output_profile ];
 
 	// loop through the arguments and add them to the command args
 	for ( var i = 0; i < args.length; i++ ) {
