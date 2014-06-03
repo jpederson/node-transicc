@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git://github.com/jpederson/node-transicc.git"
   },
+  "scripts": {
+    "test": "node_modules/.bin/mocha -w"
+  },
   "keywords": [
     "color",
     "conversion",
@@ -22,5 +25,9 @@
     "url": "https://github.com/jpederson/node-transicc/issues"
   },
   "homepage": "https://github.com/jpederson/node-transicc",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": ">= 0.0.1"
+  }
 }
