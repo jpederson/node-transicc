@@ -4,7 +4,7 @@ A simple nodejs module that wraps the LittleCMS transicc command line utility, t
 
 ### Installation
 
-First, install [LittleCMS](https://github.com/mm2/Little-CMS) using the commands below on Unix/Linux/OSX (binaries available for other OSs). It's a small, open source Python-based color management system - transicc uses a LittleCMS command line utility by the same name to perform the actual profile comparisons.
+First, install [LittleCMS](https://github.com/mm2/Little-CMS) using the commands below on Unix/Linux/OSX (binaries available for other OSs). It's a small, open source C-based color management system - transicc uses a LittleCMS command line utility by the same name to perform the actual profile comparisons.
 
 ```shell
 git clone https://github.com/mm2/Little-CMS.git
