@@ -2,9 +2,9 @@
 
 A simple nodejs module that wraps the LittleCMS transicc command line utility, to allow you to make true ICC Profile-based color conversions inside your node apps.
 
-### Installation Requirements
+### Installation
 
-You must first install LittleCMS, an open source Python library for converting colors using ICC profiles. This shell script will get you there on OSX and most Linux flavors - there are also [binaries available](http://www.littlecms.com/download.html) for most operating systems including Windows.
+First, install [LittleCMS](https://github.com/mm2/Little-CMS) using the commands below on Unix/Linux/OSX (binaries available for other OSs). It's a small, open source Python-based color management system - transicc uses a LittleCMS command line utility by the same name to perform the actual profile comparisons.
 
 ```shell
 git clone https://github.com/mm2/Little-CMS.git
@@ -15,21 +15,19 @@ make check
 sudo make install
 ```
 
-Once you've installed that dependency, you're ready to install transicc and start converting colors.
+Next, you're ready to install the node module...
 
 ```shell
 npm install transicc --save
 ```
 
-*****
-
-### Example Usage
+... and start converting colors!
 
 ```js
 var transicc = require( "transicc" );
 
 transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( rgb ){
-	console.log( rgb );
+	console.log( rgb ); // same as Photoshop, yo!
 });
 ```
 
@@ -97,7 +95,7 @@ Several ICC profiles are bundled with transicc for your convenience. Here's a co
 - xyz-d55`
 - xyz-d65`
 
-**Note:** These profiles are the property of their respective owners, and were copied as-is (simply renamed for easier organization). By using this module, you accept the terms of service agreements associated with their use as provided by Adobe, ECI, and the ICC.
+**Note:** These profiles are the property of their respective owners, and were copied as-is (simply renamed for easier organization). By using this module, you accept the terms of service agreements associated with their use as provided by Adobe, Apple, ECI, and the ICC.
 
 If there's another ICC profile you'd like bundled with this package, please ensure that the creator of that profile is OK with it being bundled in other software. Once you know that, pull requests away!
 
