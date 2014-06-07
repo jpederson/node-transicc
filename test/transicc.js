@@ -12,6 +12,7 @@ describe('transicc', function () {
 
 	it('should equal rgb( 0, 172, 236 )', function (done) {
 
+		// convert between adobe cmyk and apple rgb
 		transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( response ) {
 
 			response[0].should.equal( '0.0000' );
