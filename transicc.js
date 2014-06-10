@@ -9,7 +9,7 @@ var profile_path = function( profile_name ){
 
 		// use Adobe's CMYK profile
 		case "cmyk":
-			profile_name = "cmyk-adobe-us-web-coated-swop";
+			profile_name = "cmyk-adobe-us-web-uncoated";
 		break;
 
 		// use Apple's lab profile
