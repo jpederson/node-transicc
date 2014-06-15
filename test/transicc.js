@@ -13,11 +13,11 @@ describe('transicc', function () {
 	it('should equal rgb( 0, 172, 236 )', function (done) {
 
 		// convert between adobe cmyk and apple rgb
-		transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( response ) {
+		transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( err, response ) {
 
 			response[0].should.equal( '0.0000' );
-			response[1].should.equal( '172.1238' );
-			response[2].should.equal( '236.4124' );
+			response[1].should.equal( '160.2024' );
+			response[2].should.equal( '224.1492' );
 			done();
 
 		});
