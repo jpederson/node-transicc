@@ -1,4 +1,4 @@
-## node-transicc
+## node-transicc [![NPM version](https://badge.fury.io/js/transicc.svg)](http://badge.fury.io/js/transicc)
 
 A simple nodejs module that wraps the LittleCMS transicc command line utility, to allow you to make true ICC Profile-based color conversions inside your node apps.
 
@@ -26,10 +26,13 @@ npm install transicc --save
 ```js
 var transicc = require( "transicc" );
 
-transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( rgb ){
+transicc( "cmyk", "rgb", [ 100, 0, 0, 0 ], function( err, rgb ){
+	if ( err ) throw( err );
 	console.log( rgb ); // same as Photoshop, yo!
 });
 ```
+
+The error parameter in the callback was added in transicc v1.2.0.
 
 *****
 
@@ -91,9 +94,9 @@ Several ICC profiles are bundled with transicc for your convenience. Here's a co
 #### XYZ
 
 - `xyz` (shortcut to `xyz-d65` - the 'standard' luminant associated with daylight)
-- xyz-d50`
-- xyz-d55`
-- xyz-d65`
+- `xyz-d50`
+- `xyz-d55`
+- `xyz-d65`
 
 **Note:** These profiles are the property of their respective owners, and were copied as-is (simply renamed for easier organization). By using this module, you accept the terms of service agreements associated with their use as provided by Adobe, Apple, ECI, and the ICC.
 
