@@ -1,7 +1,6 @@
 
 
-var spawn = require( "child_process" ).spawn,
-	fs = require( "fs" );
+var spawn = require( "child_process" ).spawn;
 
 
 // new switch in 1.1.2 to replace symlinks for shortcut profiles
@@ -45,18 +44,6 @@ module.exports = function( input_profile, output_profile, args, callback ) {
 	// create an array of arguments we'll pass to the transicc command
 	var cmd_arg = [];
 
-	// error if input profile is invalid.
-	if ( !fs.existsSync( profile_path( input_profile ) ) ) {
-		callback( new Error('Invalid input profile.'), null );
-		return;
-	}
-
-	// error if output profile is invalid.
-	if ( !fs.existsSync( profile_path( output_profile ) ) ) {
-		callback( new Error('Invalid output profile.'), null );
-		return;
-	}
-
 	// add the input profile
 	cmd_arg.push( profile_path( input_profile ) );
 
@@ -75,6 +62,7 @@ module.exports = function( input_profile, output_profile, args, callback ) {
 	for ( var i = 0; i < args.length; i++ ) {
 		cmd_arg.push( args[i] );
 	}
+
 
 	// spawn the command and create an empty response
 	var cmd = spawn( "./shell/"+args.length+".sh", cmd_arg, {
