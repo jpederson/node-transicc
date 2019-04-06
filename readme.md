@@ -1,6 +1,6 @@
 ## node-transicc
 
-A simple nodejs module that wraps the LittleCMS transicc command line utility, to allow you to make true ICC Profile-based color conversions inside your node apps.
+A simple nodejs module that wraps the LittleCMS transicc command line utility, to allow you to make true ICC Profile-based color conversions inside your node apps. The goal of this project is to enable accurate color conversions, like those achieved in most image editing programs - unlike pure math-based conversions (which fail in situations like using CMYK).
 
 *****
 
