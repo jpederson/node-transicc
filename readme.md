@@ -1,6 +1,12 @@
-## node-transicc [![NPM version](https://badge.fury.io/js/transicc.svg)](http://badge.fury.io/js/transicc)
+## node-transicc
 
 A simple nodejs module that wraps the LittleCMS transicc command line utility, to allow you to make true ICC Profile-based color conversions inside your node apps.
+
+*****
+
+![GitHub release](https://img.shields.io/github/release/jpederson/node-transicc.svg?label=github) ![npm](https://img.shields.io/npm/v/transicc.svg)
+
+*****
 
 ### Installation
 
